@@ -9,12 +9,6 @@ redirects:
   to: /about/versions/android-\1
   pattern: True
 
-- from: /about/versions/index.html
-  to: /about/index.html
-
-- from: /about/versions/api-levels.html
-  to: /guide/topics/manifest/uses-sdk-element.html#ApiLevels
-
 - from: /sdk/adding-components.html
   to: /sdk/exploring.html
 
@@ -29,9 +23,6 @@ redirects:
 
 - from: /sdk/installing/next.html
   to: /training/basics/firstapp/index.html
-
-- from: /sdk/ndk/overview.html
-  to: /tools/sdk/ndk/index.html
 
 - from: /sdk/ndk/...
   to: /tools/sdk/ndk/...
@@ -122,14 +113,13 @@ redirects:
 - from: /guide/appendix/install-location.html
   to: /guide/topics/data/install-location.html
 
-- from: /guide/basics/...
+- from: /guide/basics/what-is-android.html
   to: /about/index.html
 
 - from: /guide/topics/security/security.html
   to: /training/articles/security-tips.html
-
-- from: /guide/topics/security/index.html
-  to: /training/articles/security-tips.html
+#  type: permanent
+#  comment: Move content and then adjust this
 
 - from: /guide/appendix/market-filters.html
   to: /google/play/filters.html
@@ -272,9 +262,6 @@ redirects:
 - from: /training/cloudsync/aesync.html
   to: /google/gcm/index.html
 
-- from: /training/basics/location/...
-  to: /training/location/...
-
 # -------------------- MISC ----------------------
 
 - from: /shareables/...
@@ -339,9 +326,3 @@ redirects:
 
 - from: /deviceart
   to: http://developer.android.com/distribute/promote/device-art.html
-
-- from: /edu
-  to: /distribute/googleplay/edu/index.html
-
-- from: /edu/signup
-  to: https://services.google.com/fb/forms/playedu

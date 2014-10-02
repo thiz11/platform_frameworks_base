@@ -1,5 +1,6 @@
 page.title=Handling Runtime Changes
-page.tags="activity","lifecycle"
+parent.title=Application Resources
+parent.link=index.html
 @jd:body
 
 <div id="qv-wrapper">

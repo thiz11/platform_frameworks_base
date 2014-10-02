@@ -1,5 +1,6 @@
 page.title=Motion Sensors
-page.tags="sensorevent","accelerometer","gyroscope","gravity","rotation"
+parent.title=Sensors
+parent.link=index.html
 @jd:body
 
 <div id="qv-wrapper">

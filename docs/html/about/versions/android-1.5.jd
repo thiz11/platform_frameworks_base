@@ -1,5 +1,4 @@
 page.title=Android 1.5 Platform
-excludeFromSuggestions=true
 sdk.platform.version=1.5
 sdk.platform.apiLevel=3
 sdk.platform.majorMinor=major

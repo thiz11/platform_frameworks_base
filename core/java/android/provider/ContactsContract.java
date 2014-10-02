@@ -1359,7 +1359,7 @@ public final class ContactsContract {
      * status definitions. Automatically computed as the highest presence of all
      * constituent raw contacts. The provider may choose not to store this value
      * in persistent storage. The expectation is that presence status will be
-     * updated on a regular basis.</td>
+     * updated on a regular basic.</td>
      * </tr>
      * <tr>
      * <td>String</td>
@@ -2326,7 +2326,7 @@ public final class ContactsContract {
      * parameters.  The latter approach is preferable, especially when you can reuse the
      * URI:
      * <pre>
-     * Uri rawContactUri = RawContacts.CONTENT_URI.buildUpon()
+     * Uri rawContactUri = RawContacts.URI.buildUpon()
      *          .appendQueryParameter(RawContacts.ACCOUNT_NAME, accountName)
      *          .appendQueryParameter(RawContacts.ACCOUNT_TYPE, accountType)
      *          .build();
@@ -4131,7 +4131,7 @@ public final class ContactsContract {
      * all IM rows. See {@link StatusUpdates} for individual status definitions.
      * The provider may choose not to store this value
      * in persistent storage. The expectation is that presence status will be
-     * updated on a regular basis.
+     * updated on a regular basic.
      * </td>
      * </tr>
      * <tr>

@@ -1,5 +1,4 @@
 page.title=Android 2.3 APIs
-excludeFromSuggestions=true
 sdk.platform.version=2.3
 sdk.platform.apiLevel=9
 

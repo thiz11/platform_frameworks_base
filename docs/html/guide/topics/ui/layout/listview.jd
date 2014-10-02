@@ -1,5 +1,6 @@
 page.title=List View
-page.tags="listview"
+parent.title=Layouts
+parent.link=declaring-layout.html
 @jd:body
 <div id="qv-wrapper">
 <div id="qv">

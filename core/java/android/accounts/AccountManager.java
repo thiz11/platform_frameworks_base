@@ -781,7 +781,7 @@ public class AccountManager {
      * {@link android.Manifest.permission#USE_CREDENTIALS}.
      *
      * @param account The account to fetch an auth token for
-     * @param authTokenType The auth token type, see {@link #getAuthToken getAuthToken()}
+     * @param authTokenType The auth token type, see {#link getAuthToken}
      * @param notifyAuthFailure If true, display a notification and return null
      *     if authentication fails; if false, prompt and wait for the user to
      *     re-enter correct credentials before returning
@@ -1853,7 +1853,7 @@ public class AccountManager {
      * <p>
      * The most common case is to call this with one account type, e.g.:
      * <p>
-     * <pre>  newChooseAccountIntent(null, null, new String[]{"com.google"}, false, null,
+     * <pre>  newChooseAccountsIntent(null, null, new String[]{"com.google"}, false, null,
      * null, null, null);</pre>
      * @param selectedAccount if specified, indicates that the {@link Account} is the currently
      * selected one, according to the caller's definition of selected.

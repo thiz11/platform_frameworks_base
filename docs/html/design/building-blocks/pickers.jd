@@ -1,5 +1,4 @@
 page.title=Pickers
-page.tags="datepicker","timepicker"
 @jd:body
 
 <p>Pickers provide a simple way to select a single value from a set. In addition to touching the

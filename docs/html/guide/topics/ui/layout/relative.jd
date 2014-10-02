@@ -1,5 +1,6 @@
 page.title=Relative Layout
-page.tags="relativelayout"
+parent.title=Layouts
+parent.link=layout-objects.html
 @jd:body
 
 <div id="qv-wrapper">

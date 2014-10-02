@@ -1,5 +1,4 @@
 page.title=Lists
-page.tags="listview","layout"
 @jd:body
 
 <p>Lists present multiple line items in a vertical arrangement. They can be used for data selection as

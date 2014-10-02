@@ -1,5 +1,6 @@
-page.title=Spinners
-page.tags="adapterview","spinneradapter"
+page.title= Spinners
+parent.title=Input Controls
+parent.link=../controls.html
 @jd:body
 
 <div id="qv-wrapper">

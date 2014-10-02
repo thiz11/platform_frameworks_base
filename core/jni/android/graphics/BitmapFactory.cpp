@@ -15,6 +15,7 @@
 #include "JNIHelp.h"
 
 #include <android_runtime/AndroidRuntime.h>
+#include <cutils/properties.h>
 #include <androidfw/Asset.h>
 #include <androidfw/ResourceTypes.h>
 #include <netinet/in.h>
@@ -44,6 +45,8 @@ jfieldID gBitmap_layoutBoundsFieldID;
 #endif
 
 using namespace android;
+
+bool mPurgeableAssets;
 
 static inline int32_t validOrNeg1(bool isValid, int32_t value) {
 //    return isValid ? value : -1;
@@ -351,6 +354,17 @@ static jobject doDecode(JNIEnv* env, SkStream* stream, jobject padding,
         SkCanvas canvas(*bitmap);
         canvas.scale(sx, sy);
         canvas.drawBitmap(*decoded, 0.0f, 0.0f, &paint);
+
+        // Save off the unscaled version of bitmap to be used in later
+        // transformations if it would reduce memory pressure. Only do
+        // so if it is being upscaled more than 50%, is bigger than
+        // 256x256, and not too big to be keeping a copy of (<1MB).
+        const int numUnscaledPixels = decoded->width() * decoded->height();
+        if (sx > 1.5 && numUnscaledPixels > 65536 && numUnscaledPixels < 262144) {
+            bitmap->setUnscaledBitmap(decoded);
+            adb2.detach(); //responsibility for freeing decoded's memory is
+                           //transferred to bitmap's destructor
+        }
     }
 
     if (padding) {
@@ -491,8 +505,8 @@ static jobject nativeDecodeAssetScaled(JNIEnv* env, jobject clazz, jint native_a
 
     SkStream* stream;
     Asset* asset = reinterpret_cast<Asset*>(native_asset);
-    bool forcePurgeable = optionsPurgeable(env, options);
-    if (forcePurgeable) {
+    bool forcePurgeable = mPurgeableAssets;
+    if (forcePurgeable || optionsPurgeable(env, options)) {
         // if we could "ref/reopen" the asset, we may not need to copy it here
         // and we could assume optionsShareable, since assets are always RO
         stream = copyAssetToStream(asset);
@@ -616,6 +630,11 @@ int register_android_graphics_BitmapFactory(JNIEnv* env) {
     SkASSERT(bitmap_class);
     gBitmap_nativeBitmapFieldID = getFieldIDCheck(env, bitmap_class, "mNativeBitmap", "I");
     gBitmap_layoutBoundsFieldID = getFieldIDCheck(env, bitmap_class, "mLayoutBounds", "[I");
+
+    char value[PROPERTY_VALUE_MAX];
+    property_get("persist.sys.purgeable_assets", value, "0");
+    mPurgeableAssets = atoi(value) == 1;
+
     int ret = AndroidRuntime::registerNativeMethods(env,
                                     "android/graphics/BitmapFactory$Options",
                                     gOptionsMethods,

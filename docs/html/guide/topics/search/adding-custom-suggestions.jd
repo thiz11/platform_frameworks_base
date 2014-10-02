@@ -1,5 +1,6 @@
 page.title=Adding Custom Suggestions
-page.tags="SearchRecentSuggestionsProvider",
+parent.title=Search
+parent.link=index.html
 @jd:body
 
 <div id="qv-wrapper">

@@ -1,5 +1,6 @@
 page.title=Linear Layout
-page.tags="linearlayout"
+parent.title=Layouts
+parent.link=layout-objects.html
 @jd:body
 
 <div id="qv-wrapper">

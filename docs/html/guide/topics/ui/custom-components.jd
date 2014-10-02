@@ -1,5 +1,6 @@
 page.title=Custom Components
-page.tags="view","widget"
+parent.title=User Interface
+parent.link=index.html
 @jd:body
 
 <div id="qv-wrapper">

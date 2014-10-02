@@ -119,11 +119,7 @@ one activity over others.
 
 <p>
 The value must be an integer, such as "{@code 100}".  Higher numbers have a
-higher priority. The default value is 0.
-The value must be greater than -1000 and less than 1000.</p>
-
-<p>Also see {@link android.content.IntentFilter#setPriority
-setPriority()}.
+higher priority.
 </p></dd>
 
 </dl></dd>

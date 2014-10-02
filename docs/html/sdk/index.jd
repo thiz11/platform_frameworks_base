@@ -1,47 +1,45 @@
 page.title=Android SDK
-page.tags="download"
 page.template=sdk
 header.hide=1
 page.metaDescription=Download the official Android SDK to develop apps for Android-powered devices.
 
+sdk.win32_bundle_download=adt-bundle-windows-x86.zip
+sdk.win32_bundle_bytes=418030942
+sdk.win32_bundle_checksum=ce32861d8f7c93ff6ff6971bd99d228e
 
-sdk.linux32_bundle_download=adt-bundle-linux-x86-20130514.zip
-sdk.linux32_bundle_bytes=433992720
-sdk.linux32_bundle_checksum=38b29a0721423e59c55c62c0356b1c18
+sdk.win64_bundle_download=adt-bundle-windows-x86_64.zip
+sdk.win64_bundle_bytes=418155677
+sdk.win64_bundle_checksum=f09aa4557bd1dc2703fde95dcdd6b92e
 
-sdk.linux64_bundle_download=adt-bundle-linux-x86_64-20130514.zip
-sdk.linux64_bundle_bytes=434278511
-sdk.linux64_bundle_checksum=f5f7387d209a67fe1638acab7e0037a4
+sdk.mac64_bundle_download=adt-bundle-mac-x86_64.zip
+sdk.mac64_bundle_bytes=383216991
+sdk.mac64_bundle_checksum=ea6c074ee30c426c503dab5c225a5076
 
-sdk.mac64_bundle_download=adt-bundle-mac-x86_64-20130514.zip
-sdk.mac64_bundle_bytes=403067311
-sdk.mac64_bundle_checksum=5391a1f0284c1fb87048010fbc2808ab
+sdk.linux32_bundle_download=adt-bundle-linux-x86.zip
+sdk.linux32_bundle_bytes=411205048
+sdk.linux32_bundle_checksum=e64594cd339b8d9a400b9d16c616b3c3
 
-sdk.win32_bundle_download=adt-bundle-windows-x86-20130514.zip
-sdk.win32_bundle_bytes=440739521
-sdk.win32_bundle_checksum=51fb90bc049f66730d7b8da5671a4b93
-
-sdk.win64_bundle_download=adt-bundle-windows-x86_64-20130514.zip
-sdk.win64_bundle_bytes=440868113
-sdk.win64_bundle_checksum=0eb9a91cc0c170a1f1bc9b47d0f4ec81
-
+sdk.linux64_bundle_download=adt-bundle-linux-x86_64.zip
+sdk.linux64_bundle_bytes=411478695
+sdk.linux64_bundle_checksum=582bfc9083ff4cbcfacc8223bd8c3be1
 
 
-sdk.linux_download=android-sdk_r22-linux.tgz
-sdk.linux_bytes=99643077
-sdk.linux_checksum=30fb75bad918c5c3d79f8ec3cc44b3cf
 
-sdk.mac_download=android-sdk_r22-macosx.zip
-sdk.mac_bytes=71244523
-sdk.mac_checksum=fa5193ad41edecac6960023f55569ba3
+sdk.win_installer=installer_r21.0.1-windows.exe
+sdk.win_installer_bytes=76520869
+sdk.win_installer_checksum=e2012262471a2583d4a559b15fcf45ff
 
-sdk.win_download=android-sdk_r22-windows.zip
-sdk.win_bytes=107505668
-sdk.win_checksum=71722fe052ae6380444a21bce8ee87c2
+sdk.win_download=android-sdk_r21.0.1-windows.zip
+sdk.win_bytes=99107847
+sdk.win_checksum=613568d774c3bf25c5d24db16601af83
 
-sdk.win_installer=installer_r22-windows.exe
-sdk.win_installer_bytes=87498295
-sdk.win_installer_checksum=e0cc167733bf8b51dbc7e0ad0a8c8d4b
+sdk.mac_download=android-sdk_r21.0.1-macosx.zip
+sdk.mac_bytes=65804128
+sdk.mac_checksum=30401c43a014cd5d6ec9d0c62854a1d9
+
+sdk.linux_download=android-sdk_r21.0.1-linux.tgz
+sdk.linux_bytes=91394975
+sdk.linux_checksum=eaa5a8d76d692d1d027f2bbcee019644
 
 
 
@@ -271,7 +269,7 @@ To get the ADT Bundle or stand-alone SDK Tools, please visit the web site at <a
 href="http://developer.android.com/sdk/index.html">developer.android.com/sdk/</a>
 </p>
 
-</div><!-- end col-6 (left column) -->
+</div>
 
 
 
@@ -284,9 +282,6 @@ href="http://developer.android.com/sdk/index.html">developer.android.com/sdk/</a
 <a class="big button subtitle" id="download-bundle-button"
 href="" style="display:none;width:265px;margin:0 auto;display:block" ></a>
 
-
-
-
 <p id="not-supported">Choose the SDK package for your OS from the table below.</p>
 
 </div>
@@ -298,25 +293,12 @@ href="" style="display:none;width:265px;margin:0 auto;display:block" ></a>
 
 
 
-
 <!-- alternative SDK options -->
 <div class="col-13" style="margin:0;">
 
-
-<!-- this appears only when viewing the online docs -->
-<div class="online caution">
-<h3 style="margin:0 0 10px 0;font-size:14px">Android Studio Early Access Preview</h3>
-
-<p>A new Android development environment called Android Studio,
-based on IntelliJ IDEA, is now available as an <strong>early access preview</strong>.
-For more information, see
-<a href="{@docRoot}sdk/installing/studio.html">Getting Started with Android Studio</a>.</p>
-
-</div>
-
 <p>If you prefer to use an existing version of Eclipse or another IDE,
 you can instead take a more customized approach to installing
-the Android SDK. See the following instructions:</p>
+the Android SDK. See the following instructions.</p>
 
 
 <h4 id="ExistingIDE"><a href='' class="expandable"

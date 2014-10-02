@@ -76,16 +76,9 @@
           <span class="en">Permissions</span>
         </a>
       </li>
-      <li class="nav-section">
-        <div class="nav-section-header"><a href="<?cs var:toroot ?>guide/topics/appwidgets/index.html">
+      <li><a href="<?cs var:toroot ?>guide/topics/appwidgets/index.html">
             <span class="en">App Widgets</span>
-          </a></div>
-        <ul>
-          <li><a href="<?cs var:toroot ?>guide/topics/appwidgets/host.html">
-              <span class="en">App Widget Host</span>
-            </a></li>
-        </ul>
-      </li>
+          </a></li>
       <li class="nav-section">
       <div class="nav-section-header"><a href="<?cs var:toroot ?>guide/topics/manifest/manifest-intro.html">
           <span class="en">Android Manifest</span>
@@ -510,8 +503,8 @@
       <span class="fr" style="display:none">Meilleures pratiques</span>
       <span class="it" style="display:none">Best practice</span>
       <span class="ja" style="display:none">ベスト プラクティス</span>
-      <span class="zh-cn" style="display:none">最佳实践</span>
-      <span class="zh-tw" style="display:none">最佳實務</span>
+      <span class="zh-CN" style="display:none">最佳实践</span>
+      <span class="zh-TW" style="display:none">最佳實務</span>
     </div></a>
     <ul>
       <li><a href="<?cs var:toroot ?>guide/practices/compatibility.html">
@@ -528,6 +521,9 @@
           <li><a href="<?cs var:toroot ?>guide/practices/screen-compat-mode.html">
             <span class="en">Screen Compatibility Mode</span>
           </a></li>
+          <!--<li><a href="<?cs var:toroot ?>guide/practices/screens-support-1.5.html">
+            <span class="en">Strategies for Android 1.5</span>
+          </a></li> -->
         </ul>
       </li>
       <li><a href="<?cs var:toroot ?>guide/practices/tablets-and-handsets.html">
@@ -588,8 +584,8 @@
         <span class="fr" style="display:none">Annexes</span>
         <span class="it" style="display:none">Appendice</span>
         <span class="ja" style="display:none">付録</span>
-        <span class="zh-cn" style="display:none">附录</span>
-        <span class="zh-tw" style="display:none">附錄</span>
+        <span class="zh-CN" style="display:none">附录</span>
+        <span class="zh-TW" style="display:none">附錄</span>
       </a></div>
     <ul>
       <li><a href="<?cs var:toroot ?>guide/appendix/g-app-intents.html">

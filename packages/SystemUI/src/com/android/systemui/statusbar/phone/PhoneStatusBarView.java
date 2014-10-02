@@ -26,6 +26,8 @@ import android.util.Slog;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
+
+import com.android.internal.util.pie.PiePosition;
 import com.android.systemui.R;
 
 public class PhoneStatusBarView extends PanelBar {
@@ -83,6 +85,12 @@ public class PhoneStatusBarView extends PanelBar {
         pv.setRubberbandingEnabled(!mFullWidthNotifications);
     }
 
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        mBar.onBarViewDetached();
+    }
+ 
     @Override
     public boolean panelsEnabled() {
         return ((mBar.mDisabled & StatusBarManager.DISABLE_EXPAND) == 0);
@@ -158,6 +166,12 @@ public class PhoneStatusBarView extends PanelBar {
         mBar.makeExpandedInvisibleSoon();
         mFadingPanel = null;
         mLastFullyOpenedPanel = null;
+
+        // show up you pie controls
+        mBar.updatePieTriggerMask(PiePosition.LEFT.FLAG
+                | PiePosition.TOP.FLAG
+                | PiePosition.RIGHT.FLAG
+                | PiePosition.TOP.FLAG);
     }
 
     @Override
@@ -166,6 +180,14 @@ public class PhoneStatusBarView extends PanelBar {
         if (openPanel != mLastFullyOpenedPanel) {
             openPanel.sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED);
         }
+
+        // back off you pie controls!
+        if (mShouldFade) {
+            mBar.updatePieTriggerMask(PiePosition.LEFT.FLAG
+                    | PiePosition.RIGHT.FLAG
+                    | PiePosition.TOP.FLAG);
+        }
+
         mFadingPanel = openPanel;
         mLastFullyOpenedPanel = openPanel;
         mShouldFade = true; // now you own the fade, mister

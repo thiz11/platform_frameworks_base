@@ -1,5 +1,4 @@
 page.title=Action Bar Icons
-excludeFromSuggestions=true
 parent.title=Icon Design Guidelines
 parent.link=icon_design.html
 @jd:body
@@ -97,7 +96,7 @@ finished Action Bar icon dimensions for each generalized screen density.</p>
     </th>
   </tr>
   <tr>
-    <th>
+    <th style="background-color:#f3f3f3;font-weight:normal">
       Action Bar Icon Size
     </th>
     <td>

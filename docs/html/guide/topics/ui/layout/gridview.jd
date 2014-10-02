@@ -1,5 +1,6 @@
 page.title=Grid View
-page.tags="gridview"
+parent.title=Layouts
+parent.link=layout-objects.html
 @jd:body
 <div id="qv-wrapper">
 <div id="qv">

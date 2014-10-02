@@ -158,6 +158,12 @@
     <!-- Height of the notification panel header bar -->
     <dimen name="notification_panel_header_height">48dp</dimen>
 
+    <!-- Height of the notification panel widget bar -->
+    <dimen name="notification_panel_widget_height">48dp</dimen>
+
+    <!-- Height of the notification panel header and widget -->
+    <dimen name="notification_panel_header_and_widget">96dp</dimen>
+
     <!-- Extra space above the panel -->
     <dimen name="notification_panel_padding_top">0dp</dimen>
 
@@ -205,4 +211,30 @@
     <!-- How far to slide the panel out when you touch it -->
     <!-- For phones, this is close_handle_height + header_height -->
     <dimen name="peek_height">84dp</dimen>
+
+    <!-- The padding of the items of the battery cluster -->
+    <dimen name="status_bar_battery_cluster_padding">2dip</dimen>
+    <!-- The margin adjusment of the text items of the battery cluster -->
+    <dimen name="status_bar_battery_cluster_text_margin">-1dip</dimen>
+
+    <!-- ==================== pie controls ==================== -->
+    <!-- Padding between the pie controls and the screen border -->
+    <dimen name="pie_padding">16dp</dimen>
+
+    <!-- Radius of the snap points a the border of the screen -->
+    <dimen name="pie_snap_radius">30dp</dimen>
+    <!-- Stroke width of the snap points -->
+    <dimen name="pie_snap_outline">4dp</dimen>
+
+    <dimen name="pie_outline">2dp</dimen>
+    <!-- Text size of "normal" / small text on the pie control -->
+    <dimen name="pie_textsize">12sp</dimen>
+    <!-- Minimum size of imageviews placed within pie items -->
+    <dimen name="pie_item_size">30dp</dimen>
+
+    <dimen name="pie_navbar_radius">70dp</dimen>
+    <dimen name="pie_navbar_height">85dp</dimen>
+
+    <dimen name="pie_sysinfo_radius">165dp</dimen>
+    <dimen name="pie_sysinfo_height">85sp</dimen>
 </resources>

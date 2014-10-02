@@ -9804,6 +9804,7 @@ package android.hardware {
     method public int getJpegQuality();
     method public int getJpegThumbnailQuality();
     method public android.hardware.Camera.Size getJpegThumbnailSize();
+    method public java.lang.String getPowerMode();
     method public int getMaxExposureCompensation();
     method public int getMaxNumDetectedFaces();
     method public int getMaxNumFocusAreas();
@@ -9840,6 +9841,7 @@ package android.hardware {
     method public java.util.List<java.lang.Integer> getZoomRatios();
     method public boolean isAutoExposureLockSupported();
     method public boolean isAutoWhiteBalanceLockSupported();
+    method public boolean isPowerModeSupported();
     method public boolean isSmoothZoomSupported();
     method public boolean isVideoSnapshotSupported();
     method public boolean isVideoStabilizationSupported();
@@ -9867,6 +9869,7 @@ package android.hardware {
     method public void setMeteringAreas(java.util.List<android.hardware.Camera.Area>);
     method public void setPictureFormat(int);
     method public void setPictureSize(int, int);
+    method public void setPowerMode(java.lang.String);
     method public void setPreviewFormat(int);
     method public void setPreviewFpsRange(int, int);
     method public deprecated void setPreviewFrameRate(int);
@@ -9906,6 +9909,8 @@ package android.hardware {
     field public static final java.lang.String FOCUS_MODE_FIXED = "fixed";
     field public static final java.lang.String FOCUS_MODE_INFINITY = "infinity";
     field public static final java.lang.String FOCUS_MODE_MACRO = "macro";
+    field public static final java.lang.String LOW_POWER = "Low_Power";
+    field public static final java.lang.String NORMAL_POWER = "Normal_Power";
     field public static final int PREVIEW_FPS_MAX_INDEX = 1; // 0x1
     field public static final int PREVIEW_FPS_MIN_INDEX = 0; // 0x0
     field public static final java.lang.String SCENE_MODE_ACTION = "action";
@@ -27212,6 +27217,7 @@ package android.webkit {
     method public synchronized int getTextZoom();
     method public synchronized boolean getUseWideViewPort();
     method public synchronized java.lang.String getUserAgentString();
+    method public synchronized boolean getWebSocketsEnabled();
     method public void setAllowContentAccess(boolean);
     method public void setAllowFileAccess(boolean);
     method public abstract void setAllowFileAccessFromFileURLs(boolean);
@@ -27262,6 +27268,7 @@ package android.webkit {
     method public synchronized void setTextZoom(int);
     method public synchronized void setUseWideViewPort(boolean);
     method public synchronized void setUserAgentString(java.lang.String);
+    method public synchronized void setWebSocketsEnabled(boolean);
     method public synchronized boolean supportMultipleWindows();
     method public boolean supportZoom();
     field public static final int LOAD_CACHE_ELSE_NETWORK = 1; // 0x1
@@ -41327,8 +41334,8 @@ package java.util.zip {
 
   public class ZipFile {
     ctor public ZipFile(java.io.File) throws java.io.IOException, java.util.zip.ZipException;
-    ctor public ZipFile(java.io.File, int) throws java.io.IOException;
     ctor public ZipFile(java.lang.String) throws java.io.IOException;
+    ctor public ZipFile(java.io.File, int) throws java.io.IOException;
     method public void close() throws java.io.IOException;
     method public java.util.Enumeration<? extends java.util.zip.ZipEntry> entries();
     method public java.util.zip.ZipEntry getEntry(java.lang.String);
